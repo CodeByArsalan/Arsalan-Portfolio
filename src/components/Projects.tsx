@@ -1,68 +1,74 @@
-import { Code2 } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Campus Management System UET Mardan",
-      description: "A comprehensive system to manage various campus-related activities"
+      title: "NSD E-Pay System",
+      description:
+        "Online payment and digital wallet platform for challans and government fees. Comprehensive payment gateway integration with secure transaction processing.",
+      technologies: ["ASP.NET Core", "C#", "SQL Server", "REST APIs", "Payment Gateway"],
     },
     {
-      title: "MIS For SPPAP",
-      description: "Member Information System for improved project tracking and reporting"
+      title: "Traffic Ticketing Management System (KPK)",
+      description:
+        "End-to-end traffic violation and ticket processing solution for Khyber Pakhtunkhwa government. Complete workflow automation from violation to payment.",
+      technologies: ["ASP.NET Core", "MVC", "SQL Server", "Entity Framework", "ADO.NET"],
     },
     {
-      title: "CMS (Complaint Management System) NRSP",
-      description: "System designed for managing complaints efficiently"
+      title: "Driving License Management System (KPK)",
+      description:
+        "Government-based driving record management system handling license issuance, renewal, and verification processes.",
+      technologies: ["ASP.NET Core", "C#", "SQL Server", "REST APIs"],
     },
     {
-      title: "MIS of Artificial Limbs",
-      description: "Management Information System to track artificial limb distribution"
+      title: "Cardinal Management System (UIT Malakand)",
+      description:
+        "Academic and administrative enterprise system for university management, student records, and institutional operations.",
+      technologies: ["ASP.NET Core", "MVC", "SQL Server", "Entity Framework Core"],
     },
     {
-      title: "TTMS (Traffic Ticketing Management System) KPK",
-      description: "System aimed at managing traffic-related ticketing efficiently"
+      title: "MIS Platforms",
+      description:
+        "SPPAP, Artificial Limbs & Inventory systems for organizational tracking and reporting. Comprehensive dashboards and data analytics.",
+      technologies: ["ASP.NET Core", "SQL Server", "T-SQL", "Reporting Services"],
     },
-    {
-      title: "DLMS (Driving License Management System) KPK",
-      description: "System for managing driving licenses more effectively"
-    },
-    {
-      title: "Inventory Management System",
-      description: "Designed to optimize inventory control and tracking"
-    },
-    {
-      title: "NSD E Pay",
-      description: "Portal for Wallet which facilitates online payments"
-    }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background relative">
+    <section id="projects" className="py-20 bg-background border-t border-border">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-          Projects
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          <span className="text-primary">03.</span> Featured Projects
         </h2>
-        
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl bg-gradient-card backdrop-blur-sm border border-border p-6 transition-all duration-300 hover:shadow-glow hover:scale-105"
+              className="group rounded-lg border border-border bg-card p-6 hover:border-primary/50 transition-all duration-300 flex flex-col"
             >
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 rounded-lg bg-primary/20 group-hover:bg-primary/30 transition-colors duration-300">
-                    <Code2 className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-foreground/70">{project.description}</p>
-                  </div>
-                </div>
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+
+              <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, idx) => (
+                  <Badge
+                    key={idx}
+                    variant="secondary"
+                    className="bg-secondary text-muted-foreground text-xs"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
               </div>
             </div>
           ))}
