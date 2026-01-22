@@ -45,7 +45,7 @@ const Experience = () => {
     <section id="experience" className="py-20 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          <span className="text-primary">02.</span> Professional Experience
+          Professional Experience
         </h2>
 
         <div className="space-y-6 max-w-4xl">

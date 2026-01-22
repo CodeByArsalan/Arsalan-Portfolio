@@ -26,7 +26,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          <span className="text-primary">04.</span> Skills
+          Skills
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl">
