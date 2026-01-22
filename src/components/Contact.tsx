@@ -8,7 +8,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="text-primary">05.</span> Get In Touch
+          Get In Touch
         </h2>
         <p className="text-muted-foreground mb-12 max-w-2xl">
           I'm currently seeking opportunities in the Gulf region. Whether you have a question or just want to say hi, feel free to reach out!
@@ -61,7 +61,7 @@ const Contact = () => {
                 <Button
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground justify-center"
-                  onClick={() => (window.location.href = "mailto:arsallanbakht6@gmail.com")}
+                  onClick={() => (window.location.href = "mailto:arsalanbakht6@gmail.com")}
                 >
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me

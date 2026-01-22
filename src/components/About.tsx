@@ -5,13 +5,13 @@ const About = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          <span className="text-primary">01.</span> About Me
+          About Me
         </h2>
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              Experienced .NET Developer with 3+ years of professional experience delivering secure, scalable, and high-performance web applications for enterprise and government sector projects. Strong expertise in ASP.NET Core, C#, RESTful APIs, and SQL Server with a proven track record of building transaction-based, MIS, and payment-related systems. Well-versed in structured development environments, documentation, and long-term system maintenance. Seeking a challenging opportunity in the Gulf region to contribute to large-scale, business-critical software solutions.
+              Experienced .NET Developer with 4+ years of professional experience delivering secure, scalable, and high-performance web applications for enterprise and government sector projects. Strong expertise in ASP.NET Core, C#, RESTful APIs, and SQL Server with a proven track record of building transaction-based, MIS, and payment-related systems. Well-versed in structured development environments, documentation, and long-term system maintenance. Seeking a challenging opportunity in the Gulf region to contribute to large-scale, business-critical software solutions.
             </p>
 
             <div>
@@ -28,11 +28,11 @@ const About = () => {
             <h3 className="text-lg font-bold text-foreground mb-6">Contact Info</h3>
             <div className="space-y-4">
               <a
-                href="mailto:arsallanbakht6@gmail.com"
+                href="mailto:arsalanbakht6@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-5 h-5 text-primary" />
-                <span>arsallanbakht6@gmail.com</span>
+                <span>arsalanbakht6@gmail.com</span>
               </a>
               <a
                 href="tel:+923497300253"
