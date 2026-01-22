@@ -31,9 +31,12 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 transition-all duration-300"
+              asChild
             >
-              <Download className="w-4 h-4 mr-2" />
-              Download CV
+              <a href="/resume.pdf" download="Arsalan_Khan_Resume.pdf">
+                <Download className="w-4 h-4 mr-2" />
+                Download CV
+              </a>
             </Button>
           </div>
         </div>
