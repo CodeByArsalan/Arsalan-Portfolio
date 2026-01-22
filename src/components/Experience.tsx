@@ -1,86 +1,84 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const Experience = () => {
   const experiences = [
     {
-      title: "Dotnet (Backend) Developer",
+      title: ".NET Developer (Backend)",
       company: "National Software Developers",
-      period: "01/2024 - Present",
-      location: "Peshawar, Pakistan",
-      description: "A software company specializing in high-quality software solutions",
+      location: "Peshawar",
+      period: "Jan 2024 – Present",
+      isCurrent: true,
       responsibilities: [
-        "Developing and maintaining high-quality web-based applications using C#, ASP.NET, and SQL Server",
-        "Collaborating with cross-functional teams to ensure timely project delivery",
-        "Utilizing strong analytical and problem-solving skills for quick issue resolution effectively"
-      ]
+        "Develop and maintain enterprise-level web applications using ASP.NET Core, C#, and SQL Server",
+        "Build secure APIs, financial and MIS modules, and transaction-based systems",
+        "Work on government-sector solutions including payment, traffic, and licensing systems",
+        "Optimize system performance, improve database efficiency, and support deployments",
+      ],
     },
     {
-      title: "Dotnet (Backend) Developer",
-      company: "NRSP (National Rural Support Program)",
-      period: "12/2022 - 12/2023",
-      location: "Islamabad, Pakistan",
-      description: "An organization dedicated to rural support and sustainable development",
+      title: ".NET Developer (Backend)",
+      company: "NRSP",
+      location: "Islamabad",
+      period: "Dec 2022 – Dec 2023",
+      isCurrent: false,
       responsibilities: [
-        "Worked as a Dotnet Backend developer focusing on web-based applications",
-        "Contributed to project development and team collaboration"
-      ]
+        "Developed large-scale information systems for organizational and rural development operations",
+        "Implemented backend services, reporting dashboards, and data-processing modules",
+        "Ensured system stability, data accuracy, and long-term maintainability",
+      ],
     },
     {
-      title: "Junior Dotnet Developer",
+      title: "Junior .NET Developer",
       company: "National Software Developers",
-      period: "12/2021 - 11/2022",
-      location: "Peshawar, Pakistan",
-      description: "A software company specializing in high-quality software solutions",
+      location: "Peshawar",
+      period: "Dec 2021 – Nov 2022",
+      isCurrent: false,
       responsibilities: [
-        "Assisted in developing software solutions using .NET technologies",
-        "Gained comprehensive experience through collaboration within the development team"
-      ]
-    }
+        "Supported development of enterprise web applications and internal management systems",
+        "Assisted in debugging, module enhancement, and system testing",
+        "Collaborated with senior developers to learn best practices and coding standards",
+      ],
+    },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-hero relative">
+    <section id="experience" className="py-20 bg-background border-t border-border">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-          Experience
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          <span className="text-primary">02.</span> Professional Experience
         </h2>
-        
-        <div className="max-w-4xl mx-auto space-y-8">
+
+        <div className="space-y-6 max-w-4xl">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl bg-gradient-card backdrop-blur-sm border border-border p-8 transition-all duration-300 hover:shadow-glow hover:scale-[1.02]"
+              className="rounded-lg border border-border bg-card p-6 hover:border-primary/50 transition-colors duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-4 flex-wrap gap-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{exp.title}</h3>
-                    <p className="text-xl text-primary font-semibold">{exp.company}</p>
-                    <p className="text-muted-foreground mt-2">{exp.description}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="flex items-center gap-2 text-foreground/70 mb-2">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm">{exp.period}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-foreground/70">
-                      <MapPin className="w-4 h-4" />
-                      <span className="text-sm">{exp.location}</span>
-                    </div>
-                  </div>
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                  <p className="text-primary">
+                    {exp.company} • {exp.location}
+                  </p>
                 </div>
-                
-                <ul className="space-y-2 mt-6">
-                  {exp.responsibilities.map((resp, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-foreground/80">
-                      <Briefcase className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>{resp}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-center gap-2">
+                  <Badge variant="outline" className="border-primary text-primary whitespace-nowrap">
+                    {exp.period}
+                  </Badge>
+                  {exp.isCurrent && (
+                    <Badge className="bg-primary text-primary-foreground">Current</Badge>
+                  )}
+                </div>
               </div>
+
+              <ul className="space-y-2">
+                {exp.responsibilities.map((resp, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-primary mt-1.5">▹</span>
+                    <span>{resp}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
