@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="max-w-3xl">
           <p className="text-primary mb-4">Hi, my name is</p>
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
-            Arsalan Khan
+            Arsalan
           </h1>
           <p className="text-3xl md:text-4xl text-muted-foreground font-medium mb-6">
             .NET Developer
