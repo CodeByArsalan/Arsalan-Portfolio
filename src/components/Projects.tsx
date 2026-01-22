@@ -22,7 +22,7 @@ const Projects = () => {
       technologies: ["ASP.NET Core", "C#", "SQL Server", "REST APIs"],
     },
     {
-      title: "Cardinal Management System (UIT Malakand)",
+      title: "Campus Management System (UET Mardan)",
       description:
         "Academic and administrative enterprise system for university management, student records, and institutional operations.",
       technologies: ["ASP.NET Core", "MVC", "SQL Server", "Entity Framework Core"],
